@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": ">= 15.0.0"
+  },
   "name": "quran-app",
   "version": "0.0.0",
   "private": true,

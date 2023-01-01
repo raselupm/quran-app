@@ -60,10 +60,17 @@ export default {
     },
     querySpecificSura(suraNumber) {
       this.loading = true;
-      axios.get('https://api.alquran.cloud/v1/surah/' + suraNumber).then(response => {
+      axios.get('https://api.alquran.cloud/v1/surah/' + suraNumber + '/editions/ar.muyassar,bn.bengali').then(response => {
+        let sura = [
+          {
+            number: 1,
+            arabic: '',
+            bangla: '',
+          }
+        ];
         console.log(response.data.data);
-        this.currentSura = response.data.data;
-        this.loading = false;
+        //this.currentSura = response.data.data;
+        //this.loading = false;
       })
     }
   }
